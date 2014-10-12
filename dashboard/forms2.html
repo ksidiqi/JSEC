@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php session_start();
+require('./access.php');
+?>
+<head>
+
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin - Bootstrap Admin Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="./light/js/jquery-1.11.0.min.js"></script>
+    <script src="./light/js/lightbox.min.js"></script>
+    <link href="./light/css/lightbox.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">SB Admin</a>
+                </div>
+                <!-- Top Menu Items -->
+                <ul class="nav navbar-right top-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu message-dropdown">
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><strong></strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><strong></strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><strong>John Smith</strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-footer">
+                                <a href="#">Read All New Messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu alert-dropdown">
+                            <li>
+                                <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">View All</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                               <a href="./profile.html"><i class="fa fa-fw fa-user"></i> Profile/Settings</a>
+                           </li>
+
+                           <li class="divider"></li>
+                           <li>
+                            <a href="./logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">JavaScript Error Collector</a>
+                </div>
+                <!-- Top Menu Items -->
+                <ul class="nav navbar-right top-nav">              
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="./profile.html"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            </li>                       
+                            <li class="divider"></li>
+                            <li>
+                                <a href="./logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">
+                        <li >
+                            <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        </li>
+
+                        <li>
+                            <a href="tables.html"><i class="fa fa-fw fa-table"></i> Error list</a>
+                        </li>
+                        <li class="active">
+                            <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Account Mangement</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Forms
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-edit"></i> Forms
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <?php 
+                session_start();
+                $host="localhost";
+                $port=3306;
+                $socket="";
+                $user="root";
+                $password="mysql5";
+                $dbname="db";
+                $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+                or die ('Could not connect to the database server' . mysqli_connect_error());
+                $error_id = $_SESSION['error_id'];
+                $result = $con->query("SELECT * FROM errors WHERE id= '$error_id'");
+                $error = $result->fetch_array(MYSQLI_ASSOC);
+
+                echo '
+                <div class="row">					
+                <div class="col-md-8 offset-col-md-1">
+                <div class="panel panel-danger">
+                <div class="panel-heading">
+                <h3 class="panel-title">Error</h3>
+                </div>
+                <div class="panel-body">
+                <p>Error Id:'. $error['id'] . '</p>
+                <p>Reported by: '. $error['user_email'] . ' </p>
+                <p>Group:'. $error['group_name']  . ' </p>
+                <p>Date: '. $error['date'] . '</p>
+                <p id="sever">Severity:'. $error['severity'] . ' </p>
+                <p>URL: ' . $error['url'] . '</p>
+                <p>Line: ' .    $error['line'] . ' <p>
+                <p>Reason: ' . $error['reason'] . '</p>
+                </div>
+                </div>
+                </div>
+                </div>	
+                ';
+                ?>	
+                <div class="row">
+                    <div class="col-md-8 offset-col-md-1">
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            comment
+                        </button>
+                    </div>
+                </div>
+                <br/>
+                <?php 
+                $host="localhost";
+                $port=3306;
+                $socket="";
+                $user="root";
+                $password="mysql5";
+                $dbname="db";
+                $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+                or die ('Could not connect to the database server' . mysqli_connect_error());
+                $error_id = $_SESSION['error_id'];
+                $result = $con->query("SELECT comment_id FROM comments_errors WHERE error_id= '$error_id'");
+                while ($row = $result->fetch_array(MYSQLI_ASSOC)) {	
+
+						$comment_id = $row['comment_id']; //comment id
+						$result2 = $con->query("SELECT * FROM comments WHERE id= '$comment_id'");
+						$comment = $result2->fetch_array(MYSQLI_ASSOC);
+						$image = $comment['image'];
+                        echo '
+                        
+                        <div class="row">
+
+                        <div class="col-md-8 offset-col-md-1" >
+                     <div class="media" >
+                     <a class="pull-left" href="data:image/jpeg;base64, '. base64_encode( $image ).' " data-title="Screenshot">
+                        <img src="data:image/jpeg;base64, '. base64_encode( $image ).' " width="200" alt="Screenshot" />
+                     </a>
+                     <div class="media-body">
+                     <h4 class="media-heading"> '. $comment['user_email'] .' | <small><i> Severity:  '.$comment['severity'] .' </i></small> </h4>
+                     <p>'. $comment['body'] .'</p>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     <br/>
+                     <hr/>';
+                 }
+
+                
+
+                 ?>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel">Comment</h4>
+                            </div>
+                            <div class="modal-body">
+                               <div class="well">
+                                <form role="form" method="POST" action="./submitcomment.php" enctype= "multipart/form-data">
+
+                                   <div class="form-group">
+                                    <label>Severity</label>
+                                    <select class="form-control" name="severity" >
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group" >
+                                    <label>Comment</label>
+                                    <textarea class="form-control" rows="3" name="body" ></textarea>
+                                </div>
+
+                                <div class="form-group"  >
+                                    <label>Screenshot(.jpg ONLY): </label>
+                                    <input type="file" name="image">
+
+                                </div>
+
+
+
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-success">Submit Button</button>
+                                    <button type="reset" class="btn btn-danger">Reset Button</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+
+    </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery Version 1.11.0 -->
+<script src="js/jquery-1.11.0.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
